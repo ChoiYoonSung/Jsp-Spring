@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+D:\A_TeachingMaterial\6.JspSpring\workspace\.metadata\.plugins\org.eclipse.jdt.core
+3953721435.index
+2489109999.index
+3208350570.index
+1936362902.index
+577250517.index

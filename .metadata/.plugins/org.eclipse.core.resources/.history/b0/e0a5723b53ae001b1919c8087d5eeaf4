@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap
+			PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+			"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="member">
+	
+	<select id="login" parameterClass="com.servlet.vo.MemberVO" resultClass="com.servlet.vo.MemberVO">
+		select
+			  MEM_ID
+			, MEM_PW
+		from MEMBER_TEST
+		where MEM_ID = #memId#
+		and MEM_PW = #memPw#
+	</select>
+	
+	<select id="checkIdUserAll" parameterClass="String" resultClass="int">
+		SELECT 	count(*) cnt
+		FROM MEMBER_TEST
+		WHERE 	AND MEM_ID = #memId#
+	</select>
+	
+</sqlMap>

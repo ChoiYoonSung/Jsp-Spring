@@ -1,0 +1,18 @@
+package com.servlet.service;
+
+import com.ibatis.sqlmap.client.SqlMapClient;
+import com.servlet.dao.MemberDaoImpl;
+import com.servlet.vo.MemberVO;
+
+public class MemberServiceImpl implements IMemberService{
+	private MemberDaoImpl memberDao;
+	private SqlMapClient smc;
+
+	@Override
+	public int login(MemberVO member) {
+		int cnt = 
+		return cnt;
+	}
+	
+	
+}

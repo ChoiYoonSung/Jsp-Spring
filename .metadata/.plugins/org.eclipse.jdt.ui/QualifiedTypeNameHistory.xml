@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="com.sun.java.swing.plaf.windows.WindowsInternalFrameTitlePane.ScalableIconUIResource"/>
+<fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="com.servlet.vo.MemberVO"/>
+<fullyQualifiedTypeName name="com.servlet.service.IMemberService"/>
+<fullyQualifiedTypeName name="com.servlet.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.servlet.util.SqlMapClientUtil"/>
+<fullyQualifiedTypeName name="com.servlet.dao.MemberDaoImpl"/>
+<fullyQualifiedTypeName name="com.servlet.dao.IMemberDao"/>
+</qualifiedTypeNameHistroy>

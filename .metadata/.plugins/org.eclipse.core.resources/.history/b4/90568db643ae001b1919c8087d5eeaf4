@@ -1,0 +1,9 @@
+package com.servlet.service;
+
+import com.servlet.dao.MemberDaoImpl;
+import com.ibatis.sqlmap.client.SqlMapClient;
+
+public class MemberServiceImpl {
+	private MemberDaoImpl memberDao;
+	private SqlMapClient smc;
+}
