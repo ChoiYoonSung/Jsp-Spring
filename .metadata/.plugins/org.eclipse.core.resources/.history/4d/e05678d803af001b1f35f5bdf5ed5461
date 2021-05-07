@@ -1,0 +1,9 @@
+package com.servlet.service;
+
+import com.servlet.vo.MemberVO;
+
+public interface IMemberService {
+	public int loginCheckId(String memId);
+	
+	public MemberVO login(MemberVO member);
+}

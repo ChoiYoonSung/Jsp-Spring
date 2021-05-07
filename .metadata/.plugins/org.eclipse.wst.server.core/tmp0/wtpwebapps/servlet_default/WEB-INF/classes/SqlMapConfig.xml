@@ -30,6 +30,6 @@
 		</dataSource>
 	</transactionManager>
 
-   	<sqlMap resource="sqlmap/member.xml" />
+   	<sqlMap resource="xml/member.xml" />
       	
 </sqlMapConfig>

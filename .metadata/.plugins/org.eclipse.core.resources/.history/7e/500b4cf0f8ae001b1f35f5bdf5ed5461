@@ -1,0 +1,11 @@
+package com.servlet.view;
+
+import javax.servlet.http.HttpServletResponse;
+
+public class HTMLView {
+	
+	public void html(HttpServletResponse response, String title, String css, String script, String body) {
+		response.getContentType("text/html;charset=utf-8");
+	}
+	
+}
