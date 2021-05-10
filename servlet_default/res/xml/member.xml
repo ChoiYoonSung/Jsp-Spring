@@ -32,4 +32,42 @@
 		from MEMBER_TEST
 		where MEM_ID = #memId#
 	</select>
+	
+	<insert id="insertMember" parameterClass="com.servlet.vo.MemberVO">
+		insert into MEMBER_TEST(
+			  MEM_ID
+			, MEM_PW
+			, MEM_PH
+			, MEM_MAIL
+			)
+		values(
+			  #memId#
+			, #memPw#
+			, #memPh#
+			, #memMail#
+			)
+	</insert>
+	
+	<update id="updateMember" parameterClass="com.servlet.vo.MemberVO">
+		update	MEMBER_TEST
+		set		  MEM_PW = #memPw#
+				, MEM_PH = #memPh#
+				, MEM_MAIL = #memMail#
+		where	MEM_ID = #memId#
+	</update>
+	
+	<delete id="deleteMember" parameterClass="String">
+		delete from MEMBER_TEST
+		where MEM_ID = #memId#
+	</delete>
+	
+	<select id="selectAllMember" resultClass="com.servlet.vo.MemberVO">
+		select	
+			  MEM_ID memId
+			, MEM_PW memPw
+			, MEM_PH memPh
+			, MEM_MAIL memMail
+		from MEMBER_TEST
+	</select>
+	
 </sqlMap>

@@ -13,54 +13,51 @@ import com.servlet.exception.InvalidPasswordException;
 import com.servlet.exception.NotFoundIDException;
 import com.servlet.service.IMemberService;
 import com.servlet.service.MemberServiceImpl;
-import com.servlet.view.HTMLView;
 import com.servlet.vo.MemberVO;
 
-/**
- * Servlet implementation class LoginServlet
- */
 @WebServlet("/login")
-public class LoginServlet extends HttpServlet {
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		HTMLView.loginView(response);
-	}
+public class LoginServlet extends HttpServlet{
+   
+   private IMemberService memberService = new MemberServiceImpl();
+   
+   @Override
+   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+//      HTMLView.LoginView(resp);
+      String view = "/WEB-INF/views/login.jsp";
+      
+      req.getRequestDispatcher(view).forward(req, resp);
+      
+      
+   }
+   @Override
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+      //화면 url
+      String view = "WEB-INF/views/login_success.jsp";
+      
+      String memId = req.getParameter("memId");
+      String memPw = req.getParameter("memPw");
+      
+      String script="";
+      try {
+         MemberVO memberVO =   memberService.login(memId, memPw);
+         script ="alert('로그인 성공');"
+                  + "location.href='" + req.getContextPath() + "/list';";
+         
+      } catch (NotFoundIDException e) {
+         script ="alert('" + e.getMessage() + "');" + "history.go(-1);";
+         e.printStackTrace();
+      } catch (InvalidPasswordException e) {
+         script ="alert('" + e.getMessage() + "');" + "history.go(-1);";
+         e.printStackTrace();
+      } catch (SQLException e) {
+         script = "alert('서버장애 불가');" + "history.go(-1);";
+         e.printStackTrace();
+      }
+//      ListServlet list = new ListServlet();
+//      list.doPost(req, resp);
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 입력
-		String memId = request.getParameter("memId");
-		String memPw = request.getParameter("memPw");
-		
-		//처리
-		String script = "";
-		IMemberService memberService = MemberServiceImpl.getInstance();
-		try {
-			MemberVO member = memberService.login(memId, memPw);
-			
-			script = "alert("+memId+"님 환영합니다.)"
-					+ "location.href="+request.getContextPath()+"/main";
-		} catch (NotFoundIDException e) {
-			script = "alert(" + e.getMessage() + ")"
-					+ "history.go(-1)";
-		} catch (InvalidPasswordException e) {
-			script = "alert(" + e.getMessage() + ")"
-					+ "location.href='login'";
-		} catch (SQLException e) {
-			script = "alert('서버장애로 인해 접속할 수 없습니다.')"
-					+ "location.href='login'";
-			e.printStackTrace();
-		}
-		
-		//출력
-		HTMLView.html(response, script);
-		
-		
-		MemberVO member = new MemberVO();
-		member.setMemId(memId);
-		member.setMemPw(memPw);
-		
-		
-		int cnt = memberService.loginCheckId(memId);
-//		MemberVO mem = memberService.login(member);
-	}
-
+      req.setAttribute("script", script);
+      req.getRequestDispatcher(view).forward(req, resp);
+   
+   }
 }

@@ -1,6 +1,8 @@
 package com.servlet.service;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.servlet.dao.IMemberDao;
@@ -15,7 +17,7 @@ public class MemberServiceImpl implements IMemberService{
 	private SqlMapClient smc;
 	private static IMemberService memService;
 	
-	private MemberServiceImpl() {
+	public MemberServiceImpl() {
 		memberDao = MemberDaoImpl.getInstance();
 		smc = SqlMapClientUtil.getInstance();
 	}
@@ -68,6 +70,65 @@ public class MemberServiceImpl implements IMemberService{
 		}else {
 			throw new NotFoundIDException();
 		}
+	}
+
+	@Override
+	public int insertMember(MemberVO member) throws SQLException{
+		int cnt = 0;
+		try {
+			cnt = memberDao.insertMember(smc, member);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return cnt;
+	}
+	
+	@Override
+	public int updateMember(MemberVO member) throws SQLException{
+		int cnt = 0;
+		try {
+			cnt = memberDao.updateMember(smc, member);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return cnt;
+	}
+	
+	@Override
+	public int deleteMember(String memId) throws SQLException{
+		int cnt = 0;
+		try {
+			cnt = memberDao.deleteMember(smc, memId);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return cnt;
+	}
+	
+	@Override
+	public List<MemberVO> selectAllMember() throws SQLException{
+		List<MemberVO> memList = new ArrayList<MemberVO>();
+		try {
+			memList = (List<MemberVO>)memberDao.selectAllMember(smc);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw e;
+		}
+		return memList;
+	}
+	
+	@Override
+	public MemberVO selectMember(String memId) {
+		MemberVO member = null;
+		try {
+			 member = (MemberVO)memberDao.selectMemberById(smc, memId);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return member;
 	}
 
 }

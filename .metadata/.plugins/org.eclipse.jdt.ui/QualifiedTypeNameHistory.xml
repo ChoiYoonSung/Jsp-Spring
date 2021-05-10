@@ -3,9 +3,6 @@
 <fullyQualifiedTypeName name="com.sun.java.swing.plaf.windows.WindowsInternalFrameTitlePane.ScalableIconUIResource"/>
 <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
-<fullyQualifiedTypeName name="com.servlet.service.IMemberService"/>
-<fullyQualifiedTypeName name="com.servlet.service.MemberServiceImpl"/>
 <fullyQualifiedTypeName name="com.servlet.util.SqlMapClientUtil"/>
 <fullyQualifiedTypeName name="com.servlet.dao.MemberDaoImpl"/>
 <fullyQualifiedTypeName name="com.servlet.dao.IMemberDao"/>
@@ -19,9 +16,21 @@
 <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapException"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.servlet.exception.NotFoundIDException"/>
 <fullyQualifiedTypeName name="com.servlet.exception.InvalidPasswordException"/>
 <fullyQualifiedTypeName name="com.servlet.view.HTMLView"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="com.board.vo.BoardVO"/>
+<fullyQualifiedTypeName name="com.board.dao.IBoardDao"/>
+<fullyQualifiedTypeName name="com.board.service.IBoardService"/>
+<fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="com.servlet.exception.OverlapPasswordException"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="org.apache.catalina.tribes.MembershipService"/>
+<fullyQualifiedTypeName name="com.servlet.service.IMemberService"/>
+<fullyQualifiedTypeName name="com.servlet.service.MemberServiceImpl"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="com.servlet.vo.MemberVO"/>
 </qualifiedTypeNameHistroy>

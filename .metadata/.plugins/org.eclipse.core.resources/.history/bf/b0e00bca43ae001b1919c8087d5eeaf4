@@ -1,8 +1,0 @@
-package com.servlet.service;
-
-import com.servlet.dao.MemberDaoImpl;
-
-public class MemberServiceImpl {
-	private MemberDaoImpl memberDao;
-	private SqlMapClient smc;
-}
