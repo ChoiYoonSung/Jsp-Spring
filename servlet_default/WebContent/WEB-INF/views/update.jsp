@@ -20,7 +20,7 @@ function goBack(){
 		휴대전화 : <input type="tel" name="memPh" value=""><br>
 		이메일 : <input type="email" name="memMail" value=""><br>
 		<input type="submit" value="회원가입">
+		<input type="button" value="뒤로가기" onclick="goBack()">
 	</form>
-	<input type="button" value="뒤로가기" onclick="goBack()">
 </body>
 </html>

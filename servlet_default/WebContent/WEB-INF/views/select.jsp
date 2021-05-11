@@ -20,7 +20,7 @@
 		location.href="delete?memId=<%=member.getMemId() %>";
 	}
 	function goBack(){
-		history.go(-1);
+		location.href="<%=request.getContextPath() %>/list";
 	}
 </script>
 </head>
@@ -28,17 +28,19 @@
 	<table>
 		<tr>
 			<th>아이디</th>
+			<th>비밀번호</th>
 			<th>전화번호</th>
 			<th>이메일</th>
 		</tr>
 		<tr>
 			<td><%=member.getMemId() %></td>
+			<td><%=member.getMemPw() %></td>
 			<td><%=member.getMemPh() %></td>
 			<td><%=member.getMemMail() %></td>
 		</tr>
 	</table>
 	<input type="button" value="수정하기" onclick="up()">
 	<input type="button" value="삭제하기" onclick="dl()">
-	<input type="button" value="뒤로가기" onclick="goBack()">
+	<input type="button" value="목록으로 돌아가기" onclick="goBack()">
 </body>
 </html>

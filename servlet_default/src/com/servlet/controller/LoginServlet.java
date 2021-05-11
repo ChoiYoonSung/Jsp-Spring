@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet{
    @Override
    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
       //화면 url
-      String view = "WEB-INF/views/login_success.jsp";
+      String view = "WEB-INF/views/success.jsp";
       
       String memId = req.getParameter("memId");
       String memPw = req.getParameter("memPw");
@@ -58,6 +58,5 @@ public class LoginServlet extends HttpServlet{
 
       req.setAttribute("script", script);
       req.getRequestDispatcher(view).forward(req, resp);
-   
    }
 }

@@ -27,7 +27,7 @@ public class UpdateMemberServlet extends HttpServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-		String view = "/WEB-INF/views/update_success.jsp";
+		String view = "/WEB-INF/views/success.jsp";
 		
 		String memId = request.getParameter("memId");
 		String memPw = request.getParameter("memPw");
