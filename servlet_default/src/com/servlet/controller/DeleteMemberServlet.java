@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.servlet.service.IMemberService;
 import com.servlet.service.MemberServiceImpl;
+import com.servlet.vo.MemberVO;
 
 /**
  * Servlet implementation class MainServlet
@@ -19,7 +20,21 @@ import com.servlet.service.MemberServiceImpl;
 public class DeleteMemberServlet extends HttpServlet {
 	private IMemberService memberService = new MemberServiceImpl();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request, response);
+		String view = "/WEB-INF/views/delete.jsp";
+		String memId = request.getParameter("memId");
+		MemberVO member = new MemberVO();
+		String script = "";
+		try {
+			member = memberService.selectMember(memId);
+		} catch (SQLException e) {
+			script = "alert('서버장애 불가');" + "history.go(-1);";
+			e.printStackTrace();
+		}
+		String memPw = member.getMemPw();
+		request.setAttribute("memId", memId);
+		request.setAttribute("memPw", memPw);
+		request.setAttribute("script", script);
+		request.getRequestDispatcher(view).forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

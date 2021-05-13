@@ -1,8 +1,0 @@
-package com.servlet.vo;
-
-public class LoginVO {
-	private String memId  ;
-	private String memPw  ;
-	private String memPh  ;
-	private String memMail;
-}
