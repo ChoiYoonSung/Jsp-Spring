@@ -4,9 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page trimDirectiveWhitespaces="true" %>
-<%
-	List<MemberVO> memList = (List<MemberVO>)request.getAttribute("memList");
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -52,7 +50,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center">
                     <div class="header-logo col-auto">
-                    	<h1>MainPage</h1>
+                    	<h1><a href="list">MainPage</a></h1>
                     </div>
                 </div>
             </div>
@@ -105,27 +103,16 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <%
-                                if(memList.size() != 0){
-                                	
-                                	for(int i = 0; i < memList.size(); i++){
-                                %>
+                                <c:if test="${empty memList }">
+                                	<tr><td>값이 없습니다.</td></tr>
+                                </c:if>
+                                <c:forEach var="member" items="${memList }">
                                     <tr>
-                                        <td><a href="select?memId=<%=memList.get(i).getMemId() %>"><%=memList.get(i).getMemId() %></a></td>
-                                        <td><%=memList.get(i).getMemPh() %></td>
-                                        <td><%=memList.get(i).getMemMail() %></td>
+                                        <td><a href="select?memId=${member.memId }">${member.memId }</a></td>
+                                        <td>${member.memPh }</td>
+                                        <td>${member.memMail }</td>
                                     </tr>
-                               <%
-                                	}
-                                }else{
-                                	
-                               %>
-                               		<tr>
-                               			<td>값이 없습니다.</td>
-                               		</tr>
-                               <%
-                                }
-                               %>
+                                </c:forEach>
                                 </tbody>
                             </table>
                         </div>

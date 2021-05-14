@@ -48,7 +48,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center">
                     <div class="header-logo col-auto">
-                    	<h1>MainPage</h1>
+                    	<h1><a href="list">MainPage</a></h1>
                     </div>
                 </div>
             </div>

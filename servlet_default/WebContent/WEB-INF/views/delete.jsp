@@ -48,7 +48,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center">
                     <div class="header-logo col-auto">
-                    	<h1>MainPage</h1>
+                    	<h1><a href="list">MainPage</a></h1>
                     </div>
                 </div>
             </div>
@@ -111,10 +111,11 @@
 					<div class="row mbn-30">
 
 						<!--Author Information Start-->
-						<div class="col-xlg-12 col-lg-12 col-12 mb-30">
+						<div class="col-xlg-3 col-lg-3 col-3"></div>
+						<div class="col-xlg-6 col-lg-6 col-6 mb-30">
 							<div class="box">
 								<div class="box-head">
-									<h3 class="title">Author Information</h3>
+									<h3 class="title">Check Id/Password</h3>
 									<span class="text-secondary">삭제된 아이디와 데이터는 복구되지 않습니다.</span>
 								</div>
 								<div class="box-body">
@@ -143,6 +144,7 @@
 
 							</div>
 						</div>
+						<div class="col-xlg-3 col-lg-3 col-3"></div>
 						<!--Author Information End-->
 					</div>
 				</div>

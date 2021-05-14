@@ -49,7 +49,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-between align-items-center">
                     <div class="header-logo col-auto">
-                    	<h1>MainPage</h1>
+                    	<h1><a href="list">MainPage</a></h1>
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
 				<!-- Page Heading Start -->
 				<div class="col-12 col-lg-auto mb-20">
 					<div class="page-heading">
-						<h3>Author Profile</h3>
+						<h3>Update Profile</h3>
 					</div>
 				</div>
 				<!-- Page Heading End -->
@@ -126,7 +126,7 @@
 													<label for="id">User Id</label>
 												</div>
 												<div class="col-sm-4.5 col-9 mb-20">
-													<input type="text" class="form-control" id="id" name="memId" value="" placeholder="Id" readonly="readonly">
+													<input type="text" class="form-control" id="id" name="memId" value="${memId }" placeholder="Id" readonly="readonly">
 												</div>
 												<div class="col-sm-1.5 col-3 mb-20">
 													<label for="password">User Password</label>
