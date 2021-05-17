@@ -50,6 +50,16 @@
                     <div class="header-logo col-auto">
                     	<h1><a href="list">MainPage</a></h1>
                     </div>
+                    <div class="header-right flex-grow-1 col-auto">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- Side Header Toggle & Search Start -->
+                            <div class="col-auto">
+                                <div class="row align-items-center">
+                                    <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
+                                </div>
+                            </div><!-- Side Header Toggle & Search End -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div><!-- Header Section End -->
@@ -69,11 +79,19 @@
         </div><!-- Side Header End -->
 
         <!-- Content Body Start -->
-		<!-- Content Body Start -->
 		<div class="content-body">
-
+			<!-- Page Headings Start -->
+			<div class="row justify-content-between align-items-center mb-10">
+				<!-- Page Heading Start -->
+				<div class="col-12 col-lg-auto mb-20">
+					<div class="page-heading">
+						<h3>Select Member</h3>
+					</div>
+				</div>
+				<!-- Page Heading End -->
+			</div>
+			<!-- Page Headings End -->
 			<div class="row mbn-50">
-
 				<!--Author Top Start-->
 				<div class="col-12 mb-50">
 					<div class="author-top">
@@ -155,7 +173,7 @@
             <div class="container-fluid">
 
                 <div class="footer-copyright text-center">
-                    <p class="text-body-light">2021 &copy; copyright YoonSung Choi</a></p>
+                    <p class="text-body-light">2021 &copy; copyright YoonSung Choi</p>
                 </div>
 
             </div>

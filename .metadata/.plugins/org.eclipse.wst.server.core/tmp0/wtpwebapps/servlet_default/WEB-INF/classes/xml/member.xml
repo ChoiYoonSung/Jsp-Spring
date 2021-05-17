@@ -68,6 +68,7 @@
 			, MEM_PH memPh
 			, MEM_MAIL memMail
 		from MEMBER_TEST
+		order by MEM_ID
 	</select>
 	
 </sqlMap>

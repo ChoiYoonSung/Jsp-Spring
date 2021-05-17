@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>List</title>
+    <title>Delete</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,6 +50,16 @@
                     <div class="header-logo col-auto">
                     	<h1><a href="list">MainPage</a></h1>
                     </div>
+                    <div class="header-right flex-grow-1 col-auto">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- Side Header Toggle & Search Start -->
+                            <div class="col-auto">
+                                <div class="row align-items-center">
+                                    <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
+                                </div>
+                            </div><!-- Side Header Toggle & Search End -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div><!-- Header Section End -->
@@ -73,20 +83,17 @@
 
 			<!-- Page Headings Start -->
 			<div class="row justify-content-between align-items-center mb-10">
-
 				<!-- Page Heading Start -->
 				<div class="col-12 col-lg-auto mb-20">
 					<div class="page-heading">
-						<h3>Author Profile</h3>
+						<h3>Delete Member</h3>
 					</div>
 				</div>
 				<!-- Page Heading End -->
-
 			</div>
 			<!-- Page Headings End -->
 
 			<div class="row mbn-50">
-
 				<!--Author Top Start-->
 				<div class="col-12 mb-50">
 					<div class="author-top">

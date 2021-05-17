@@ -56,7 +56,7 @@
                             </div>
 
                             <div class="login-register-form">
-                                <form action="list" method="post">
+                                <form action="join" method="post">
                                     <div class="row">
 
                                         <div class="col-12 mb-20"><input class="form-control" type="text" placeholder="User ID" name="memId"></div>
@@ -68,12 +68,12 @@
                                         <div class="col-12 mb-20"><input class="form-control" type="text" placeholder="Email" name="memMail"></div>
                                         
                                         <div class="col-12">
-                                            <div class="row justify-content-between">
-                                                <div class="col-auto mb-15"><a href="login">Login Now.</a></div>
-                                                <div class="col-auto mb-15"><a href="list">목록으로 돌아가기.</a></div>
+                                            <div class="justify-content-between">
+                                                <div class="col-12 mb-15">이미 아이디가 있으신가요?<a href="login">Login Now.</a></div>
+                                                <div class="col-12 mb-15">리스트로 돌아가기 <a href="list">Go List.</a></div>
                                             </div>
                                         </div>
-                                        <div class="col-12 mt-10"><button class="button button-primary button-outline">sign up</button></div>
+                                        <div class="col-12 mt-10"><button type="submit" class="button button-primary button-outline">sign up</button></div>
                                     </div>
                                 </form>
 

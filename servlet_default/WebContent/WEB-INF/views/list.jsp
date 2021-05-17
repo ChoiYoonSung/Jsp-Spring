@@ -52,6 +52,16 @@
                     <div class="header-logo col-auto">
                     	<h1><a href="list">MainPage</a></h1>
                     </div>
+                    <div class="header-right flex-grow-1 col-auto">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- Side Header Toggle & Search Start -->
+                            <div class="col-auto">
+                                <div class="row align-items-center">
+                                    <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
+                                </div>
+                            </div><!-- Side Header Toggle & Search End -->
+                        </div>
+                    </div>
                 </div>
             </div>
         </div><!-- Header Section End -->

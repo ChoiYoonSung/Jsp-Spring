@@ -10,7 +10,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>List</title>
+    <title>Update</title>
     <meta name="robots" content="noindex, follow" />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -50,6 +50,16 @@
                 <div class="row justify-content-between align-items-center">
                     <div class="header-logo col-auto">
                     	<h1><a href="list">MainPage</a></h1>
+                    </div>
+                    <div class="header-right flex-grow-1 col-auto">
+                        <div class="row justify-content-between align-items-center">
+                            <!-- Side Header Toggle & Search Start -->
+                            <div class="col-auto">
+                                <div class="row align-items-center">
+                                    <div class="col-auto"><button class="side-header-toggle"><i class="zmdi zmdi-menu"></i></button></div>
+                                </div>
+                            </div><!-- Side Header Toggle & Search End -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,19 +142,19 @@
 													<label for="password">User Password</label>
 												</div>
 												<div class="col-sm-4.5 col-9 mb-20">
-													<input type="password" class="form-control" id="password" value="" required="required">
+													<input type="password" class="form-control" name="memPw" id="password" value="" required="required">
 												</div>
 												<div class="col-sm-1.5 col-3 mb-20">
 													<label for="phoneNumber">User PhoneNumber</label>
 												</div>
 												<div class="col-sm-4.5 col-9 mb-20">
-													<input type="text" class="form-control" id="phoneNumber" value="" placeholder="Phone Number" required="required">
+													<input type="text" class="form-control" name="memPh" id="phoneNumber" value="" placeholder="Phone Number" required="required">
 												</div>
 												<div class="col-sm-1.5 col-3 mb-20">
 													<label for="mail">User PhoneNumber</label>
 												</div>
 												<div class="col-sm-4.5 col-9 mb-20">
-													<input type="email" class="form-control" id="mail" value="" placeholder="E-Mail" required="required">
+													<input type="email" class="form-control" name="memMail" id="mail" value="" placeholder="E-Mail" required="required">
 												</div>
 												<div class="col-12 mt-10 mb-20">
 													<input type="submit" class="button button-primary button-outline" value="Save Changes">

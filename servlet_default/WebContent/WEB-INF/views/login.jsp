@@ -61,9 +61,9 @@
                                         <div class="col-12 mb-20"><input class="form-control" type="text" placeholder="User ID" name="memId"></div>
                                         <div class="col-12 mb-20"><input class="form-control" type="password" placeholder="Password" name="memPw"></div>
                                         <div class="col-12">
-                                            <div class="row justify-content-between">
+                                            <div class="justify-content-between">
                                                 <div class="col-auto mb-15">아이디가 없으신가요? <a href="join">Join Now.</a></div>
-                                                <div class="col-auto mb-15">리스트<a href="list">Go List.</a></div>
+                                                <div class="col-auto mb-15">리스트로 돌아가기 <a href="list">Go List.</a></div>
                                             </div>
                                         </div>
                                         <div class="col-12 mt-10"><button type="submit" class="button button-primary button-outline">sign in</button></div>
