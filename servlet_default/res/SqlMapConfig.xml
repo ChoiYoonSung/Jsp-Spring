@@ -1,35 +1,32 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE sqlMapConfig
-    PUBLIC "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN"
-    "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
 
-<!-- SQL설정파일 SqlMapConfig.properties와 연관 -->
-<sqlMapConfig>
-	<properties resource="SqlMapConfig.properties" /> 
+	<properties resource="SqlMapConfig.properties" />
 	
-	<!-- ibatis 환경 설정 부분 -->
-	<!-- useStatementNamespaces="true" 필수 ==> sqlMap/member.xml 연관 
-	smc.insert("member.insertMember", mv); 의 member.insertMember를 id로 인식함 -->
-	<settings cacheModelsEnabled="true" enhancementEnabled="true" 
-		lazyLoadingEnabled="true" maxRequests="32" maxSessions="10"
-		maxTransactions="5" useStatementNamespaces="true" /> 
+	<typeAliases>
+		<typeAlias type="java.lang.String" alias="str"/>
+		<typeAlias type="java.lang.Integer" alias="int"/>
+		
+		<typeAlias type="com.servlet.vo.MemberVO" alias="userAllVO"/>
+	</typeAliases>
 	
-	<!-- 패키지 경로 Alias로 지정-->
-	<!-- 형식) <typeAlias alias="alias명" type="클래스의 풀네임"/>	 -->
- 	<typeAlias alias="userAllVO" type="com.servlet.vo.MemberVO"/>
-
-	<!-- SqlMapConfig.properties 내 설정한 DB 연결 정보와 매핑 -->
-	<transactionManager type="JDBC">
-		<dataSource type="SIMPLE">
-			<property name="JDBC.Driver" value="${driver}" /> 
-			<property name="JDBC.ConnectionURL" value="${url}" />
-			<property name="JDBC.Username" value="${username}" />
-			<property name="JDBC.Password" value="${password}" />
-			<property name="Pool.MaximumActiveConnections" value="1"/> <!-- 커넥션 개수 1개 설 -->
-			<property name="Pool.MaximumIdleConnections" value="1"/>
-		</dataSource>
-	</transactionManager>
-
-   	<sqlMap resource="xml/member.xml" />
-      	
-</sqlMapConfig>
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="${driver}" />
+				<property name="url" value="${url}" />
+				<property name="username" value="${username}" />
+				<property name="password" value="${password}" />
+				
+				<property name="poolMaximumActiveConnections" value="2"/>
+				<property name="poolMaximumIdleConnections" value="2"/>
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="xml/member.xml" />
+	</mappers>
+</configuration>
