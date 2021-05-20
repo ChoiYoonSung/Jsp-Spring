@@ -9,12 +9,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="SqlSession session" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="SqlMapClient smc"/>
 			<item value="page heading"/>
 			<item value="card"/>
 			<item value="src"/>
@@ -29,9 +30,9 @@
 			<item value="Side Header Inner Star"/>
 			<item value="row justify-content-between align-items-center"/>
 			<item value="header-logo col-auto"/>
-			<item value="dataTable"/>
 		</list>
 		<list key="replacehistory">
+			<item value="SqlSession session"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

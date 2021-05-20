@@ -3,22 +3,24 @@ package com.servlet.dao;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.servlet.vo.MemberVO;
 
 public interface IMemberDao {
-	public int loginCheckId(SqlMapClient smc, String memId) throws SQLException;
+	public int loginCheckId(SqlSession session, String memId) throws SQLException;
 	
-//	public MemberVO login(SqlMapClient smc, MemberVO memberVO) throws SQLException;
+//	public MemberVO login(SqlSession session, MemberVO memberVO) throws SQLException;
 	
-	public MemberVO selectMemberById(SqlMapClient smc, String memId)throws SQLException;
+	public MemberVO selectMemberById(SqlSession session, String memId)throws SQLException;
 
-	public int insertMember(SqlMapClient smc, MemberVO member)throws SQLException;
+	public int insertMember(SqlSession session, MemberVO member)throws SQLException;
 	
-	public int updateMember(SqlMapClient smc, MemberVO member)throws SQLException;
+	public int updateMember(SqlSession session, MemberVO member)throws SQLException;
 
-	public int deleteMember(SqlMapClient smc, String memId)throws SQLException;
+	public int deleteMember(SqlSession session, String memId)throws SQLException;
 	
-	public List<MemberVO> selectAllMember(SqlMapClient smc)throws SQLException;
+	public List<MemberVO> selectAllMember(SqlSession session)throws SQLException;
 
 }

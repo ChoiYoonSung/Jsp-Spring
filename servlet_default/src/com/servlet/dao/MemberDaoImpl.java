@@ -3,6 +3,8 @@ package com.servlet.dao;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.ibatis.session.SqlSession;
+
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.servlet.vo.MemberVO;
 
@@ -17,48 +19,44 @@ public class MemberDaoImpl implements IMemberDao{
 	}
 	
 	@Override
-	public int loginCheckId(SqlMapClient smc, String memId) throws SQLException {
-		int cnt = (int) smc.queryForObject("member.loginCheckId", memId);
+	public int loginCheckId(SqlSession session, String memId) throws SQLException {
+		int cnt = (int) session.selectOne("member.loginCheckId", memId);
 		return cnt;
 	}
 	
 //	@Override
-//	public MemberVO login(SqlMapClient smc, MemberVO memberVO) throws SQLException {
+//	public MemberVO login(SqlSession session, MemberVO memberVO) throws SQLException {
 //		MemberVO mv = (MemberVO) smc.queryForObject("member.login", memberVO);
 //		return mv;
 //	}
 	
 	@Override
-	public MemberVO selectMemberById(SqlMapClient smc, String memId) throws SQLException {
-		MemberVO member = (MemberVO) smc.queryForObject("member.selectMemberByID", memId);
+	public MemberVO selectMemberById(SqlSession session, String memId) throws SQLException {
+		MemberVO member = (MemberVO) session.selectOne("member.selectMemberByID", memId);
 		return member;
 	}
 
 	@Override
-	public int insertMember(SqlMapClient smc, MemberVO member) throws SQLException {
-		int cnt = 0;
-		Object obj = smc.insert("member.insertMember", member);
-		if(obj == null) {
-			cnt = 1;
-		}
+	public int insertMember(SqlSession session, MemberVO member) throws SQLException {
+		int cnt = session.insert("member.insertMember", member);
 		return cnt;
 	}
 
 	@Override
-	public int updateMember(SqlMapClient smc, MemberVO member) throws SQLException {
-		int cnt = (int) smc.update("member.updateMember", member);
+	public int updateMember(SqlSession session, MemberVO member) throws SQLException {
+		int cnt = (int) session.update("member.updateMember", member);
 		return cnt;
 	}
 
 	@Override
-	public int deleteMember(SqlMapClient smc, String memId) throws SQLException {
-		int cnt = (int) smc.delete("member.deleteMember", memId);
+	public int deleteMember(SqlSession session, String memId) throws SQLException {
+		int cnt = (int) session.delete("member.deleteMember", memId);
 		return cnt;
 	}
 
 	@Override
-	public List<MemberVO> selectAllMember(SqlMapClient smc) throws SQLException {
-		List<MemberVO> memList = (List<MemberVO>)smc.queryForList("member.selectAllMember");
+	public List<MemberVO> selectAllMember(SqlSession session) throws SQLException {
+		List<MemberVO> memList = session.selectList("member.selectAllMember");
 		return memList;
 	}
 	

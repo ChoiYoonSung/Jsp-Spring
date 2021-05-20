@@ -8,7 +8,7 @@ import com.servlet.exception.NotFoundIDException;
 import com.servlet.vo.MemberVO;
 
 public interface IMemberService {
-	public int loginCheckId(String memId);
+	public int loginCheckId(String memId) throws SQLException;
 	
 	public MemberVO login(String memId, String memPw) throws NotFoundIDException, InvalidPasswordException,SQLException;
 
