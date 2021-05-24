@@ -11,7 +11,7 @@ import kr.or.ddit.dto.MenuVO;
 
 public class TestOracleMyBatisSqlSessionFactory {
 
-	private SqlSessionFactory factory = new OracleMyBatisSessionFactory();
+	private SqlSessionFactory factory = new OracleMyBatisSqlSessionFactory();
 	private SqlSession session;
 
 	@Before

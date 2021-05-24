@@ -10,7 +10,7 @@ import org.junit.After;
 import org.junit.Assert;
 
 import kr.or.ddit.dto.MenuVO;
-import kr.or.ddit.mybatis.OracleMyBatisSessionFactory;
+import kr.or.ddit.mybatis.OracleMyBatisSqlSessionFactory;
 
 public class TestMenuDAOImpl {
 	private SqlSession session;
@@ -18,7 +18,7 @@ public class TestMenuDAOImpl {
 	
 	@Before
 	public void init() {
-		session = new OracleMyBatisSessionFactory().openSession(false);
+		session = new OracleMyBatisSqlSessionFactory().openSession(false);
 		menuDAO = new MenuDAOImpl();
 	}
 	

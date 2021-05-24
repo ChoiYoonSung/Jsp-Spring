@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.apache.ibatis.session.TransactionIsolationLevel;
 
-public class OracleMyBatisSessionFactory implements SqlSessionFactory{
+public class OracleMyBatisSqlSessionFactory implements SqlSessionFactory{
 
 	private SqlSessionFactory sqlSessionFactory;
 	{
