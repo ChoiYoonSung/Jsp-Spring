@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.servlet.view.HTMLView"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
-<fullyQualifiedTypeName name="com.board.vo.BoardVO"/>
-<fullyQualifiedTypeName name="com.board.dao.IBoardDao"/>
 <fullyQualifiedTypeName name="com.board.service.IBoardService"/>
 <fullyQualifiedTypeName name="com.ibatis.sqlmap.client.SqlMapClient"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="com.servlet.exception.OverlapPasswordException"/>
-<fullyQualifiedTypeName name="org.apache.catalina.tribes.MembershipService"/>
 <fullyQualifiedTypeName name="com.servlet.service.IMemberService"/>
 <fullyQualifiedTypeName name="com.servlet.service.MemberServiceImpl"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
@@ -40,7 +35,6 @@
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="kr.or.ddit.service.MenuServiceImpl"/>
 <fullyQualifiedTypeName name="kr.or.ddit.service.MockMenuDAO"/>
-<fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="org.junit.Assert"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
@@ -55,9 +49,15 @@
 <fullyQualifiedTypeName name="org.w3c.dom.Document"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.util.Map"/>
-<fullyQualifiedTypeName name="kr.or.ddit.service.MenuService"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="org.apache.catalina.tribes.MembershipService"/>
 <fullyQualifiedTypeName name="kr.or.ddit.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="kr.or.ddit.service.MenuService"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="kr.or.ddit.dto.MenuVO"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="kr.or.ddit.utils.JSONResolver"/>
 </qualifiedTypeNameHistroy>
