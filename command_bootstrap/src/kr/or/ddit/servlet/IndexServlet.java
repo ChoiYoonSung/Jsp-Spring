@@ -18,7 +18,7 @@ import kr.or.ddit.service.MenuService;
  * Servlet implementation class MainMenuServlet
  */
 @WebServlet("/index.html")
-public class MainMenuServlet extends HttpServlet {
+public class IndexServlet extends HttpServlet {
 	private MenuService menuService = (MenuService)ApplicationContext.getApplicationContext().get("menuService");
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

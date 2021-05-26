@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
      	<!-- main menu list -->
      	<c:forEach var="menu" items="${menuList }">
 	    	<li class="nav-item d-none d-sm-inline-block">
-		    	<a class="nav-link" href="${menu.murl }">
+		    	<a class="nav-link" href="javascript:subMenu('${menu.mcode }'); goPage('${menu.murl }','${menu.mcode}');">
 		    		<i class="${menu.micon }"></i>
 		    		${menu.mname }
 		    	</a>
@@ -163,6 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
+        
         </div>
         <div class="info">
          
@@ -220,15 +221,60 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- handlebars -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+<script type="text/x-handlebars-template"  id="subMenu-list-template" >
+{{#each .}}
+	<li class="nav-item subMenu" >
+      	<a href="javascript:goPage('{{murl}}','{{mcode}}');initPageParam();" class="nav-link">
+          <i class="{{micon}}"></i>
+             <p>{{mname}}</p>
+        </a>
+	</li>
+{{/each}}
+</script>
 
 <!-- common -->
- <script >
- 	$('ul.navbar-nav > li.nav-item > a').click(function(event){
- 		
- 		$('iframe[name="ifr"]').attr('src',$(this).attr('href'));
- 		
- 		return false;
- 	});
+<script >
+function subMenu(mcode){
+	if(mcode != 'M000000'){
+	 $.getJSON("/subMenu.do?mCode="+mcode, function(data){
+		printData(data, $('.subMenuList'),$('#subMenu-list-template'), '.subMenu');
+	 });
+	}else{
+	 $('.subMenuList').html("");
+	}
+}
+
+function printData(dataArr, target, templateObject, removeClass){
+	var template = Handlebars.compile(templateObject.html());
+	var html = template(dataArr);
+	
+	$(removeClass).remove();
+	target.append(html);
+}
+
+function goPage(url, mcode){
+ 	// HTML5 지원브라우저에서 사용 가능
+	if (typeof(history.pushState) == 'function'){
+		// 현재 주소 가져옴
+		var renewURL = location.href;
+		// 현재 주소 중 .do / .html 뒤 부분이 있다면 날려버림(파라미터)
+		renewURL = renewURL.substring(0, renewURL.indexOf(".html")+5);
+		
+		if(mcode != 'M000000'){
+		 renewURL += "?mCode="+mcode;
+		}
+		// 페이지를 리로드 하지 않고 페이지 주소만 변경할 때 사용
+		history.pushState(mcode, null, renewURL);
+	}else{
+		location.hash = "#"+mcode;
+	}
+ 
+	$('iframe[name="ifr"]').attr("src",url);
+}
+
+subMenu('${menu.mcode}'.substring(0,3)+"0000");
+goPage('${menu.murl}','${menu.mcode}');
+
  </script>
  </body>
  </html>

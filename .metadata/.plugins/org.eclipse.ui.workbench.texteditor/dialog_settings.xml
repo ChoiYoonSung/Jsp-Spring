@@ -9,37 +9,39 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="href" key="selection"/>
+		<item value="subMenu-list" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="submenu-list"/>
+			<item value="submenulist"/>
+			<item value="&lt;%=request.getContextPath() %&gt;"/>
+			<item value="90"/>
+			<item value="uriencoding"/>
+			<item value="UTF"/>
+			<item value="utf"/>
+			<item value="secret"/>
+			<item value="secretRequ"/>
+			<item value="/resources/"/>
+			<item value="&lt;%=request.getContextPath() %&gt;/resources"/>
+			<item value="/resources"/>
 			<item value="url"/>
 			<item value="href"/>
 			<item value="/re"/>
-			<item value="servlet"/>
-			<item value="SqlMapClient smc"/>
-			<item value="page heading"/>
-			<item value="card"/>
-			<item value="src"/>
-			<item value="author information"/>
-			<item value="box"/>
-			<item value="aria-control"/>
-			<item value="aria"/>
-			<item value="widgets"/>
-			<item value="Data Table"/>
-			<item value="selec"/>
 		</list>
 		<list key="replacehistory">
+			<item value="&lt;%=request.getContextPath() %&gt;/resources/"/>
+			<item value="&lt;$"/>
 			<item value="SqlSession session"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="288" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-		<item value="391" key="DIALOG_HEIGHT"/>
-		<item value="8" key="DIALOG_X_ORIGIN"/>
-		<item value="293" key="DIALOG_Y_ORIGIN"/>
+		<item value="363" key="DIALOG_HEIGHT"/>
+		<item value="946" key="DIALOG_X_ORIGIN"/>
+		<item value="300" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
