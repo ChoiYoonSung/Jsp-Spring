@@ -9,12 +9,13 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="subMenu-list" key="selection"/>
+		<item value="AJP" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="AJP"/>
 			<item value="submenu-list"/>
 			<item value="submenulist"/>
 			<item value="&lt;%=request.getContextPath() %&gt;"/>
@@ -29,7 +30,6 @@
 			<item value="/resources"/>
 			<item value="url"/>
 			<item value="href"/>
-			<item value="/re"/>
 		</list>
 		<list key="replacehistory">
 			<item value="&lt;%=request.getContextPath() %&gt;/resources/"/>

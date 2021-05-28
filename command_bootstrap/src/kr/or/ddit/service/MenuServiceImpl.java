@@ -7,9 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import kr.or.ddit.dao.MenuDAO;
-import kr.or.ddit.dao.MenuDAOImpl;
 import kr.or.ddit.dto.MenuVO;
-import kr.or.ddit.mybatis.OracleMyBatisSqlSessionFactory;
 
 public class MenuServiceImpl implements MenuService {
 	private MenuDAO menuDAO;
@@ -22,6 +20,7 @@ public class MenuServiceImpl implements MenuService {
 	public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
 		this.sqlSessionFactory = sqlSessionFactory;
 	}
+
 	@Override
 	public List<MenuVO> getMainMenuList() throws SQLException {
 		List<MenuVO> menuList = null;

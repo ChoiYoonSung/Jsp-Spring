@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.or.ddit.handler.Handler;
 
-@WebServlet("/FromServlet")
+@WebServlet("/FrontServlet")
 public class FrontServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		requestPro(request, response);
@@ -40,13 +40,13 @@ public class FrontServlet extends HttpServlet {
 						ViewResolver.view(request, response, view);
 					}
 				} catch (Exception e) {
-					response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+					response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 500 Error
 				}
 			}else {
-				response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+				response.sendError(HttpServletResponse.SC_BAD_REQUEST); // 400 Error
 			}
 		}else {
-			response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+			response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 500 Error
 		}
 	}
 
