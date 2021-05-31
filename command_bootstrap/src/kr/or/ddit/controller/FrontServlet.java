@@ -1,6 +1,7 @@
 package kr.or.ddit.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -8,7 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
+import kr.or.ddit.dto.MemberVO;
 import kr.or.ddit.handler.Handler;
 
 @WebServlet("/FrontServlet")
@@ -43,7 +46,7 @@ public class FrontServlet extends HttpServlet {
 					response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 500 Error
 				}
 			}else {
-				response.sendError(HttpServletResponse.SC_BAD_REQUEST); // 400 Error
+				response.sendError(HttpServletResponse.SC_NOT_FOUND); // 404 Error(Page Not Found)
 			}
 		}else {
 			response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 500 Error

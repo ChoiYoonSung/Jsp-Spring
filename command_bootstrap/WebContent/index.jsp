@@ -10,8 +10,8 @@
 	</script>
 </c:if>
 <c:if test="${empty loginUser }">
-<!-- 	<script> -->
-// 	  	location.href="loginForm.do";
-<!-- 	</script> -->
-	<jsp:forward page="/WEB-INF/views/common/loginForm.jsp"/>
+	<script>
+ 	  	location.href="loginForm.do";
+	</script>
+<%-- 	<jsp:forward page="/WEB-INF/views/common/loginForm.jsp"/> --%>
 </c:if>

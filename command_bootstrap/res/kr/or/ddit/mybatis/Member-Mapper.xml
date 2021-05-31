@@ -6,4 +6,9 @@
 		from member
 		where id=#{id}
 	</select>
+	
+	<select id="selectMemberList" resultType="member">
+		select *
+		from member
+	</select>
 </mapper>

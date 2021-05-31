@@ -1,10 +1,12 @@
 package kr.or.ddit.service;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
+import kr.or.ddit.command.Criteria;
 import kr.or.ddit.dao.MemberDAO;
 import kr.or.ddit.dto.MemberVO;
 import kr.or.ddit.exception.InvalidPasswordException;
@@ -42,6 +44,28 @@ public class MemberServiceImpl implements MemberService {
 		try {
 			MemberVO member = memberDAO.selectMemberById(session, id);
 			return member;
+		} finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public List<MemberVO> getMemberList() throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession();
+		try {
+			List<MemberVO> memList = memberDAO.selectMemberList(session);
+			return memList;
+		} finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public List<MemberVO> getMemberList(Criteria criteria) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession();
+		try {
+			List<MemberVO> memList = memberDAO.selectMemberList(session,criteria);
+			return memList;
 		} finally {
 			session.close();
 		}
