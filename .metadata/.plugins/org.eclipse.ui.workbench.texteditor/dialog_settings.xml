@@ -9,12 +9,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="role=&quot;form&quot;" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="role=&quot;form&quot;"/>
+			<item value="rold=&quot;form&quot;"/>
 			<item value="취소"/>
 			<item value="80"/>
 			<item value="8009"/>
@@ -28,8 +30,6 @@
 			<item value="utf"/>
 			<item value="secret"/>
 			<item value="secretRequ"/>
-			<item value="/resources/"/>
-			<item value="&lt;%=request.getContextPath() %&gt;/resources"/>
 		</list>
 		<list key="replacehistory">
 			<item value="&lt;%=request.getContextPath() %&gt;/resources/"/>
