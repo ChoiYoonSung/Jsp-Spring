@@ -70,7 +70,7 @@
 								<th>등록날짜</th>
 							</tr>
 						<c:forEach var="member" items="${memList }" >
-							<tr>
+							<tr onclick="OpenWindow('detail.do?id=${member.id }','','800','900')" style="cursor:pointer;">
 								<td>${member.id }</td>
 								<td>${member.pwd }</td>
 								<td>${member.email }</td>
@@ -88,6 +88,4 @@
 			</div>
 		</div>
 	</section>
-
-<script src="/resources/js/common.js"></script>
 </body>

@@ -9,12 +9,18 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="role=&quot;form&quot;" key="selection"/>
+		<item value="pictureView" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="pictureVIew"/>
+			<item value="pw"/>
+			<item value="idCheck"/>
+			<item value="common"/>
+			<item value="commonj"/>
+			<item value="["/>
 			<item value="role=&quot;form&quot;"/>
 			<item value="rold=&quot;form&quot;"/>
 			<item value="취소"/>
@@ -22,14 +28,6 @@
 			<item value="8009"/>
 			<item value="AJP"/>
 			<item value="submenu-list"/>
-			<item value="submenulist"/>
-			<item value="&lt;%=request.getContextPath() %&gt;"/>
-			<item value="90"/>
-			<item value="uriencoding"/>
-			<item value="UTF"/>
-			<item value="utf"/>
-			<item value="secret"/>
-			<item value="secretRequ"/>
 		</list>
 		<list key="replacehistory">
 			<item value="&lt;%=request.getContextPath() %&gt;/resources/"/>

@@ -12,9 +12,11 @@ import kr.or.ddit.dto.MemberVO;
 public interface MemberDAO {
 	MemberVO selectMemberById(SqlSession session, String id) throws SQLException;
 	
-	List<MemberVO> selectMemberList(SqlSession session) throws SQLException;	// 전체 조회
-	List<MemberVO> selectMemberList(SqlSession session, Criteria cri) throws SQLException;		// 페이징
+	List<MemberVO> selectMemberList(SqlSession session) throws SQLException;						// 전체 조회
+	List<MemberVO> selectMemberList(SqlSession session, Criteria cri) throws SQLException;			// 페이징
 	List<MemberVO> selectMemberList(SqlSession session, SearchCriteria cri) throws SQLException;	// 검색
 	
 	int selectMemberListCount(SqlSession session, SearchCriteria cri) throws SQLException;
+	
+	public void insertMember(SqlSession session, MemberVO member) throws SQLException;		// 회원등록
 }

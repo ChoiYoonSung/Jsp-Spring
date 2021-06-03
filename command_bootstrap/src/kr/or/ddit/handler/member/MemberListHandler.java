@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.or.ddit.dto.MemberVO;
 import kr.or.ddit.handler.Handler;
 import kr.or.ddit.service.MemberService;
+import kr.or.ddit.service.MenuService;
 
 public class MemberListHandler implements Handler {
 
@@ -19,7 +20,7 @@ public class MemberListHandler implements Handler {
 	
 	@Override
 	public String process(HttpServletRequest request, HttpServletResponse response) throws Exception {
-		String url = "/member/list";
+		String url = "member/list";
 		
 		List<MemberVO> memList = memberService.getMemberList();
 		

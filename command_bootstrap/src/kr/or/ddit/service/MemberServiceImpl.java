@@ -94,4 +94,14 @@ public class MemberServiceImpl implements MemberService {
 		}
 	}
 
+	@Override
+	public void regist(MemberVO member) throws SQLException {
+		SqlSession session = sqlSessionFactory.openSession();
+		try {
+			memberDAO.insertMember(session, member);
+		} finally {
+			session.close();
+		}
+	}
+
 }
