@@ -38,11 +38,11 @@ public class FrontServlet extends HttpServlet {
 			if(handler != null) {
 				try {
 					view = handler.process(request, response);
-					
 					if(view != null) {
 						ViewResolver.view(request, response, view);
 					}
 				} catch (Exception e) {
+					e.printStackTrace();
 					response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR); // 500 Error
 				}
 			}else {

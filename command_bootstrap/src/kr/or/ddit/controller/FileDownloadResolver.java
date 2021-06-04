@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.or.ddit.utils.MakeFileName;
 
 public class FileDownloadResolver {
-	public static void sendFIle(String fileName, String savedPath, HttpServletRequest request, HttpServletResponse response)
+	public static void sendFile(String fileName, String savedPath, HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException{
 		
 		String filePath = savedPath + File.separator + fileName;

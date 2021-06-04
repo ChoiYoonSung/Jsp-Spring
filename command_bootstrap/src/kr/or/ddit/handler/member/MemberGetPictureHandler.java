@@ -16,7 +16,7 @@ public class MemberGetPictureHandler implements Handler {
 		String fileName = request.getParameter("picture");
 		String savedPath = GetUploadPath.getUploadPath("member.picture.upload");
 		
-		FileDownloadResolver.sendFIle(fileName, savedPath, request, response);
+		FileDownloadResolver.sendFile(fileName, savedPath, request, response);
 		
 		return url;
 	}

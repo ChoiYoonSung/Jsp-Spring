@@ -23,4 +23,13 @@ public interface MemberService {
 	Map<String, Object> getMemberList(SearchCriteria cri) throws SQLException;
 	
 	public void regist(MemberVO member) throws SQLException;
+	
+	public void modify(MemberVO member) throws SQLException;
+	
+	public void remove(String id) throws SQLException;
+	
+	public void disabled(String id) throws SQLException;
+	
+	public void enabled(String id) throws SQLException;
+	
 }

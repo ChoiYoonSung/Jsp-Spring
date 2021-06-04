@@ -5,7 +5,6 @@
 <title>회원수정</title>
 
 <body>
-
 	<!-- Content Wrapper. Contains page content -->
 	<div>
 		<section class="content-header">
@@ -32,13 +31,15 @@
 					<div class="register-card-body">
 						<div class="row">
 							<input type="hidden" name="oldPicture" value="${member.picture }" />
-							<input type="file" id="inputFile" name="picture" style="display: none" />
+							<input type="file" id="inputFile" name="picture" style="display: none" onchange="changePicture_go()"/>
 							<div class="input-group col-md-12">
 								<div class="col-md-12" style="text-align: center;">
-									<div class="" id="pictureView" data-id="${member.id }" style="border: 1px solid green; height: 200px; width: 140px; margin: 0 auto; margin-bottom: 5px;"></div>
+									<div class="" id="pictureView" data-id="${member.id }"
+									style="border: 1px solid green; height: 200px; width: 140px; margin: 0 auto; margin-bottom: 5px;"></div>
 									<div class="input-group input-group-sm">
 										<label for="inputFile" class=" btn btn-warning btn-sm btn-flat input-group-addon">사진변경</label>
-										<input id="inputFileName" class="form-control" type="text" name="tempPicture" disabled value="${member.picture.split('\\$\\$')[1] }" />
+										<input id="inputFileName" class="form-control" type="text" name="tempPicture" disabled
+										value="${member.picture.split('\\$\\$')[1] }" />
 										<input id="picture" class="form-control" type="hidden" name="uploadPicture" />
 									</div>
 								</div>
@@ -91,9 +92,9 @@
 						</div>
 
 						<div class="card-footer row" style="margin-top: 0; border-top: none;">
-							<button type="button" id="modifyBtn" onclick="" class="btn btn-warning col-sm-4 text-center">수정하기</button>
+							<button type="button" id="modifyBtn" onclick="modify_go()" class="btn btn-warning col-sm-4 text-center">수정하기</button>
 							<div class="col-sm-4"></div>
-							<button type="button" id="cancelBtn" onclick="CloseWindow()" class="btn btn-default pull-right col-sm-4 text-center">취소</button>
+							<button type="button" id="cancelBtn" onclick="history.go(-1)" class="btn btn-default pull-right col-sm-4 text-center">취소</button>
 						</div>
 					</div>
 				</div>
@@ -105,6 +106,43 @@
 <script>
 window.onload= function(){
 	MemberPictureThumb(document.querySelector('[data-id="${member.id }"]'), '${member.picture}');
+}
+
+function changePicture_go(){
+	var picture = $('input#inputFile')[0];
+	
+	var fileFormat = picture.value.substr(picture.value.lastIndexOf(".")+1).toUpperCase();
+	
+	if(!(fileFormat == "JPG" || fileFormat == "JPEG")){
+		alert("이미지는 jpg형식만 가능합니다.");
+		return;
+	}
+	if(picture.files[0].size > 1024*1024*1){
+		alert("사진 용량은 1MB 이하만 가능합니다.");
+		return;
+	}
+	
+	document.getElementById("inputFileName").value = picture.files[0].name;
+	
+	if(picture.files && picture.files[0]){
+		var reader = new FileReader();
+		
+		reader.onload = function(e){
+			$('div#pictureView').css({
+					'background-image':'url('+e.target.result+')',
+					'background-position':'center',
+					'background-size':'cover',
+					'background-repeat':'no-repeat'
+			});
+		}
+		reader.readAsDataURL(picture.files[0]);
+	}
+	$('input[name="uploadPicture"]').val(picture.files[0].name);
+}
+
+function modify_go(){
+	var form = $('form[role="form"]');
+	form.submit();
 }
 </script>
 </body>

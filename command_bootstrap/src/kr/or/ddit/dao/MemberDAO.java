@@ -19,4 +19,12 @@ public interface MemberDAO {
 	int selectMemberListCount(SqlSession session, SearchCriteria cri) throws SQLException;
 	
 	public void insertMember(SqlSession session, MemberVO member) throws SQLException;		// 회원등록
+	
+	public void updateMember(SqlSession session, MemberVO member) throws SQLException;		// 회원수정
+	
+	public void deleteMember(SqlSession session, String id) throws SQLException;		// 회원삭제
+
+	public void disabledMember(SqlSession session, String id) throws SQLException;	// 회원 사용 비활성
+	
+	public void enabledMember(SqlSession session, String id) throws SQLException;		// 회원 사용 활성
 }

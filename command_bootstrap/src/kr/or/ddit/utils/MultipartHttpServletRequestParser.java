@@ -90,7 +90,6 @@ public class MultipartHttpServletRequestParser {
 		
 		Enumeration<String> result = Collections.enumeration(paramNames);
 		
-		
 		return result;
 	}
 	
@@ -105,10 +104,3 @@ public class MultipartHttpServletRequestParser {
 		return files;
 	}
 }
-
-
-
-
-
-
-

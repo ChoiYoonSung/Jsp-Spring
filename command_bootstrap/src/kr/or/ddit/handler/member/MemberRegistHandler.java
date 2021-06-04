@@ -3,11 +3,13 @@ package kr.or.ddit.handler.member;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import kr.or.ddit.controller.FileDownloadResolver;
 import kr.or.ddit.dto.MemberVO;
 import kr.or.ddit.dto.MenuVO;
 import kr.or.ddit.handler.Handler;
 import kr.or.ddit.service.MemberService;
 import kr.or.ddit.service.MenuService;
+import kr.or.ddit.utils.GetUploadPath;
 
 public class MemberRegistHandler implements Handler {
 	
@@ -24,10 +26,10 @@ public class MemberRegistHandler implements Handler {
 		String id = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
 		String email = request.getParameter("email");
-		String picture = request.getParameter("picture");
 		String authority = request.getParameter("authority");
 		String name = request.getParameter("name");
-		
+		String picture = request.getParameter("picture");
+
 		String phone = "";
 		for(String data : request.getParameterValues("phone")) phone += data;
 		
